@@ -25,9 +25,15 @@ let weather = {
         document.querySelector(".temperature").innerText = temp + " °F";
         document.querySelector(".wind").innerText = speed + " MPH";
         document.querySelector(".humidity").innerText = humidity + " %";
+    },
+    search : function () {
+        this.fetchWeather(document.querySelector(".search-bar").value);
     }
+
 };
 
-
+document.querySelector(".search button").addEventListener("click", function () {
+    weather.search();
+})
 
 
