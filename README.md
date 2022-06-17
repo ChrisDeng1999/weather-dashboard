@@ -5,6 +5,9 @@
 My Weather Dashboard is a weather forcasting app that will allow users to look at the current days wether and an additional 5 day forcast for which ever city the user selects.
 It also saves the city that the user selects and stores it as a reference for the user to look back on.
 
+## Project Goals
+
+In the future I would like to be able to grab the UV index from the api and place it onto the screen.
 
 ### Links
 

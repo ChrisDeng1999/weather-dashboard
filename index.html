@@ -7,6 +7,7 @@
 
 
   <!--JQUERY UI ,BOOTSTRAP STYLE LINK-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="./assets/css/style.css"/>
@@ -14,16 +15,50 @@
 
 </head>
 <body>
-  <header>
+  <header class = "d-flex justify-content-center align-items-center">
     <h1>Weather Dashboard</h1>
   </header>
+
+  <main class = "row">
+    <aside class = "col col-lg-2 d-flex justify-content-center align-items-center text-center">
+      <div class = "card">
+        <div class = "search">
+          <h2>Seach for a City!</h2>
+          <input type = "text" placeholder="Search..." class = "search-bar">
+          <button type="submit">
+            🔍
+          </button>
+
+        </div>
+      </div>
+    </aside>
+   
+
+    <div class = "col col-lg-10 d-flex justify-content-center align-items-center text-center">
+      <div class = "weather hide">
+        <h2 class = "city"></h2> 
+        <img src = "" alt = "" class = "icon"/>
+        <div class = "temperature"></div>
+        <div class = "wind"></div>
+        <div class = "humidity"></div>
+        <div class = "uv index"></div>
+      </div>
+
+      <div>
+
+      </div>
+    </div>
+
+  </main>
+
 
 
 
 
     
-<!--JQUERY SCRIPT-->
+<!--JQUERY & JQUERY WIDGET SCRIPT-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
     <!--CUSTOM SCRIPT-->
     <script src="./assets/js/script.js"></script>

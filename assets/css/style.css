@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("background-photo.jpg");
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header {
+    background-color: rgb(15, 150, 228);
+    height: 80px;
+}
+
+
+.weather {
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px;
+    width: 200px;
+}
+
+.hide {
+    display: none;
+}
+
+.card {
+    border: none;
+}
