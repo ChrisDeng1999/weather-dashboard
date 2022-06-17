@@ -31,11 +31,16 @@ let weather = {
         weatherBox.removeClass("hide");
 
         localStorage.setItem("name", name)
-        localStorage.setItem("icon", icon)
-        localStorage.setItem("temp", temp)
-        localStorage.setItem("humidity", humidity)
-        localStorage.setItem("speed", speed)
+        
+        function grabData () {
+            for (var name in localStorage)
+            $(".savedSearches").innerText = localStorage.getItem(name);
+        }
+        
+        grabData();
     },
+
+    
     search : function () {
         this.fetchWeather(document.querySelector(".search-bar").value);
     },
@@ -44,9 +49,6 @@ let weather = {
 };
 
 
-function grabData () {
-
-}
 
 
 document.querySelector(".search button").addEventListener("click", function () {

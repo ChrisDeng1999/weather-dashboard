@@ -46,3 +46,16 @@ h1 {
     font-weight: bold;
     font-size: 16px;
 }
+
+.savedCities {
+    margin-top: 100px;
+}
+
+.consistent {
+    width: 250px;
+}
+
+.savedSearches {
+    width: 150px;
+    height: 30px;
+}
