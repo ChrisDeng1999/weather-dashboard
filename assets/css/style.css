@@ -4,21 +4,28 @@
 }
 
 body {
-    background-image: url("background-photo.jpg");
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color: rgb(248, 235, 219);
 }
 
-header {
-    background-color: rgb(15, 150, 228);
-    height: 80px;
+.image {
+    background-image: url("../images/ASpot_Weather.jpg");
+    background-size: cover;
+    height: 150px;
 }
 
+h1 {
+    font-size: 50px;
+    color: white;
+}
 
 .weather {
     border-radius: 10px;
     box-shadow: 0 0 10px 2px;
     width: 200px;
+    height: 170px;
+    background-color: white;
 }
 
 .hide {
@@ -27,4 +34,15 @@ header {
 
 .card {
     border: none;
+    height: 170px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.temperature, 
+.wind,
+.humidity,
+.uvIndex {
+    font-weight: bold;
+    font-size: 16px;
 }

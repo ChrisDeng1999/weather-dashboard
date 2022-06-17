@@ -29,6 +29,12 @@ let weather = {
         document.querySelector(".humidity").innerText = humidity + " %";
 
         weatherBox.removeClass("hide");
+
+        localStorage.setItem("name", name)
+        localStorage.setItem("icon", icon)
+        localStorage.setItem("temp", temp)
+        localStorage.setItem("humidity", humidity)
+        localStorage.setItem("speed", speed)
     },
     search : function () {
         this.fetchWeather(document.querySelector(".search-bar").value);
@@ -37,6 +43,10 @@ let weather = {
 
 };
 
+
+function grabData () {
+
+}
 
 
 document.querySelector(".search button").addEventListener("click", function () {
