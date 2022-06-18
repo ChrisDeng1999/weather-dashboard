@@ -21,7 +21,11 @@ let weather = {
         const {icon} = data.weather[0];
         const {temp, humidity} = data.main;
         const {speed} = data.wind;
-        console.log(name, icon, temp, humidity, speed)
+        const {lon} = data.coord;
+        const {lat} = data.coord;
+
+
+        console.log(name, icon, temp, humidity, speed, lon, lat)
         document.querySelector(".city").innerText = name ;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".temperature").innerText = temp + " °F";
@@ -32,12 +36,21 @@ let weather = {
 
         localStorage.setItem("name", name)
         
-        function grabData () {
-            for (var name in localStorage)
-            $(".savedSearches").innerText = localStorage.getItem(name);
-        }
+     
+        fetch (
+            `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=c25a148c5ababbe5c65b4d14f9f97672`
+        ) 
+            .then ((response) => response.json())
+            .then ((data) => this.uviWeather(data));
         
-        grabData();
+        function uviWeather(data) {
+            const {uvi} = data.current;
+            
+            console.log (uvi);
+        };
+     
+        
+        
     },
 
     
