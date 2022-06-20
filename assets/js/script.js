@@ -28,9 +28,9 @@ let weather = {
         console.log(name, icon, temp, humidity, speed, lon, lat)
         document.querySelector(".city").innerText = name ;
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
-        document.querySelector(".temperature").innerText = temp + " °F";
-        document.querySelector(".wind").innerText = speed + " MPH";
-        document.querySelector(".humidity").innerText = humidity + " %";
+        document.querySelector(".temperature").innerText = "Temp: " + temp + " °F";
+        document.querySelector(".wind").innerText = "Wind: " + speed + " MPH";
+        document.querySelector(".humidity").innerText = "Humidity: " + humidity + " %";
 
         weatherBox.removeClass("hide");
 
@@ -41,17 +41,17 @@ let weather = {
             `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=c25a148c5ababbe5c65b4d14f9f97672`
         ) 
             .then ((response) => response.json())
-            .then ((data) => this.uviWeather(data));
-        
-        function uviWeather(data) {
-            const {uvi} = data.current;
+            .then ((data) => console.log(data));
             
-            console.log (uvi);
-        };
+    },
+       uviWeather: function (data) {
+            const {uvi} = data.current;
+            document.querySelector(".uvIndex").innerText = "UV Index: " + uvi;
+        },
      
         
         
-    },
+    
 
     
     search : function () {
